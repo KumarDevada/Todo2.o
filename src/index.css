@@ -1,0 +1,360 @@
+:root {
+    /* --primary: ;
+    --secondary: ;
+    --light: ;
+    --light-alt: ;
+    --dark: ;
+    --dark-alt: ; */
+    --white: #fffffe;
+    --grey: #eff0f3;
+    --orange: #ff8e3c;
+    --pink: #d9376e;
+    --black: #272343;
+    --yellow: #ffd803;
+    --blue: #bae8e8;
+
+    --g1: #435334;
+    --g2: #9EB384;
+    --g3: #CEDEBD;
+    --g4: #FAF1E4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma;
+}
+
+body {
+    background-color: var(--black);
+    background-color: var(--g4);
+    /* background-color: lightsalmon; */
+    color: var(--black);
+}
+
+/* Login page */
+#name {
+    width: 340px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+}
+#email {
+    width: 340px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+}
+#pass {
+    width: 340px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+}
+.ibox {
+    display: flex;
+    width: 340px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#tick {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    color: green;
+}
+#warning {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    color: red;
+}
+#eye {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    cursor: pointer;
+}
+#lbtn {
+    width: 340px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color:  lightcoral;
+    margin-bottom: 30px;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}
+#lbtn:hover {
+    color: purple;
+    background-color: var(--g3);
+}
+#rbtn {
+    width: 340px;
+    height: 40px;
+    border-radius: 10px;
+    color: purple;
+    background-color: var(--g3);
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}
+#rbtn:hover {
+    color: white;
+    background-color: lightcoral;
+}
+.spinner {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    background-color: lightslategrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 10px solid #dfc;
+    border-color: rgb(114, 249, 46) transparent rgb(114, 249, 46) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.App {
+    padding: 32px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.logout {
+    height: 40px;
+    padding: 5px 10px;
+    font-size: large;
+    font-weight: 600;
+    margin: 10px 0px;
+    border-radius: 10px;
+    background-color: lightcoral;
+    border: 2px solid brown;
+    color: brown;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);; */
+    
+}
+.logout:hover {
+    background-color: var(--g3);
+}
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--yellow);
+    color: lightcoral;
+}
+
+h4 {
+    font-size: 18px;
+    color: var(--orange);
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.box {
+    display: flex;
+}
+
+.todo {
+    width: 98%;
+    position: relative;
+    background-color: var(--blue);
+    background-color: lightcoral;
+    background-color: var(--g3);
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px solid var(--g2);
+    display: flex;
+    /* align-items: center; */
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.todo:hover {
+    opacity: 0.3;
+}
+
+.todo .checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    border: 2px solid darkblue;
+    transition: 0.2s;
+}
+
+.todo.is-complete{
+    opacity: 0.3;
+}
+
+.todo.is-complete .checkbox {
+    background-color: grey;
+    /* background-image: linear-gradient(to bottom, var(--pink), white); */
+}
+
+.todo .text {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.todo.is-complete .text {
+    text-decoration: line-through;
+}
+
+.delete-todo {
+    /* position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%); */
+
+    width: 28px;
+    height: 28px;
+    color: white;
+    background-color: red;
+    border: 2px solid var(--black);
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    font-size: medium;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.addPopup {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    font-size: xxx-large;
+    font-weight: 700;
+    color: whitesmoke;
+    background-color: var(--g1);
+    border: 2px solid var(--black);
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--g3);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0px 3px 24px var(--black);
+}
+
+.closePopup {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    font-size: medium;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+    border: 2px solid var(--black);
+    color: white;
+    border-radius: 50%;
+}
+
+.popup h3 {
+    color: #272343;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.add-todo-input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 24px rgba(0,0,0,0.2);
+    width: 100%;
+    font-size: 20px;
+}
+
+.button {
+    padding: 16px 32px;
+    border-radius: 5px;
+    background-color: lightcoral;
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 16px;
+    text-align: center;
+    cursor: pointer;
+}
